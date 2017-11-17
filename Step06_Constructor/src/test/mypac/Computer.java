@@ -29,8 +29,9 @@ public class Computer {
 	 */
 	
 	// 생성자(Constructor) : 객체를 생성할 때 호출되는 부분, 객체가 생성되는 시점에 초기화 작업이 필요할때 사용.
-	// 생성자를 입력하지 않으면 비어있는 디폴트 생성자를 호출한다.
+	// 생성자를 입력하지 않으면 비어있는 디폴트 생성자를 호출한다. (생성자를 아무것도 생성하지 않았을 때만 호출)
 	// 클래스명과 같고 리턴해주는 타입이 명시X (method가 아니기 때문)
+	
 	public Computer() {
 		System.out.println("Computer() 호출됨"); 
 		// system도 class라고 볼 수 있다 -> out이라는 static 필드가 있음, printstream타입의 참조값이 들어가 있음
