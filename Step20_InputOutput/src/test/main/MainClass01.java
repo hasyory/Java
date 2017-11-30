@@ -8,6 +8,36 @@ import java.io.InputStream;
  * 	-1byte 처리 스트림(byte 알갱이의 흐름)
  * - 문자의 경우는 영문자 대소문자, 숫자, 특수문자 한글자를 읽을 수 있다
  * - 한글은 처리 불 가 
+ * 
+ * [Input]
+
+InputStream
+
+파일 자체의 바이트를 읽는
+FileInputStream
+
+파일에서 문자열을 읽는
+FileReader
+
+InputStreamReader
+
+BufferedReader
+
+
+[Output]
+
+OutputStream
+
+파일 자체의 바이트를 참조하는
+FileOutputStream
+
+파일에서 문자열을 참조하는
+FileWriter
+
+OutputStreamReader
+
+BufferedWriter
+
  */
 public class MainClass01 {
 	public static void main(String[] args) {
