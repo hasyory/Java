@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h3>인덱스 페이지</h3>
+<ul>
+	<li><a href="test?name=hk">TestServlet 테스트</a></li>
+	<li><a href="/Step02_Request/test?name=hk">TestServlet 테스트2</a></li>
+	<li><a href="test2?num=1&name=hk">Test2Servlet 테스트</a></li>
+	<li><a href="users/loginform.html">로그인 폼</a></li>
+</ul>
+<h3>test2 Get 방식 전송 테스트</h3>
+<form action="test2" method="get">
+	<label for="num">Num:
+	<input type="text" name="num" id="num"/>
+	</label>
+	<label for="name">Name:
+	<input type="text" name="name" id="name"/>
+	</label>
+	<button type="submit">Submit</button>
+</form>
+<h3>insert Post 방식 전송 테스트</h3>
+<form action="insert" method="post">
+	<label for="name">Name:
+	<input type="text" name="name" id="name"/>
+	</label>
+	<label for="addr">Addr:
+	<input type="text" name="addr" id="addr"/>
+	</label>
+	<button type="submit">Submit</button>
+</form>
+</body>
+</html>
