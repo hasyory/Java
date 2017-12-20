@@ -8,20 +8,31 @@
 <link rel="stylesheet" href="css/bootstrap.css" />
 </head>
 <body>
-<div class="container">
-<h3>인덱스 페이지</h3>
 <%
 	String id=(String)session.getAttribute("id");
 %>
-<%if(id!=null){ %>
-<p><a href="users/private/myInfo.jsp"><strong><%=id %></strong></a>님 환영합니다. <a href="users/logout.jsp"><small>로그아웃</small></a></p>
-<%}else{%>
-<p>환영합니다.</p>
-<% }%>
-<ul>
-	<li><a href="users/signup_form.jsp">회원가입</a></li>
-	<li><a href="users/login_form.jsp?url=${pageContext.request.contextPath}/">로그인</a></li>
-</ul>
+<div class="container">
+	<div class="panel panel-default">
+	  <div class="panel-heading">
+    	<div class="col-xs-6 text-left">
+    		<h3 class="panel-title"><strong>인덱스 페이지</strong></h3>
+    	</div>
+    	<div class="col-xs-push-6 text-right">
+		    <%if(id!=null){ %>
+			<span class="glyphicon glyphicon-user"></span><a href="users/private/myInfo.jsp"><strong><%=id %></strong></a>님 환영합니다. 
+			<a class="btn btn-default btn-xs" href="users/logout.jsp">로그아웃<span class="glyphicon glyphicon-log-out"></span></a>
+			<%}else{%>
+			환영합니다.  
+			<a class="btn btn-default btn-xs" href="users/login_form.jsp?url=${pageContext.request.contextPath}/">로그인</a>
+			<a class="btn btn-default btn-xs" href="users/signup_form.jsp">회원가입</a> 
+			<% }%>
+		</div>
+	  </div>
+	  <div class="panel-body">
+		<h3>비로그인 -> 회원가입 / 로그인</h3>
+		<h3>로그인 -> 회원정보 보기 / 수정 / 탈퇴</h3>
+	  </div>
+	</div>
 </div>
 </body>
 </html>

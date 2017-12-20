@@ -147,4 +147,31 @@ public class UsersDao {
 		}
 		return isSuccess;
 	}
+	public boolean delete(String id) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		boolean isSuccess = false;
+		try {
+			conn = new DBcpBean().getConn();
+			String sql = "DELETE FROM users WHERE id=?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, id);
+
+			int flag = pstmt.executeUpdate();
+			if (flag > 0) {
+				isSuccess = true;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (pstmt != null)
+					pstmt.close();
+				if (conn != null)
+					conn.close();
+			} catch (Exception e) {
+			}
+		}
+		return isSuccess;
+	}
 }

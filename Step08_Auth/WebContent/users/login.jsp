@@ -7,8 +7,10 @@
 <head>
 <meta charset="UTF-8">
 <title>users/login.jsp</title>
+<link rel="stylesheet" href="../css/bootstrap.css" />
 </head>
 <body>
+<div class="container">
 <%
 	//1. 폼 전송되는 아이디 비밀번호를 읽어와서
 	request.setCharacterEncoding("utf-8");
@@ -29,12 +31,32 @@
 	//세션에 로그인정보를 담는다. 
 	session.setAttribute("id",id);
 %>
-	<p><strong><%=id %></strong>회원님 로그인 되었습니다.</p>
-	<a href="<%=url %>">확인</a>
-	<!-- JSP에서 사용할 수 있는 또다른 언어 EL -->
+	<div class="panel panel-default">
+	  <div class="panel-heading">
+	    <h3 class="panel-title"><strong>로그인 결과</strong></h3>
+	  </div>
+	  <div class="panel-body">
+	    	<p><strong><%=id %></strong>회원님 로그인 되었습니다.</p>
+	  </div>
+	  <div class="panel-footer">
+	  	<a class="btn btn-default" href="<%=url %>">확인 <span class="glyphicon glyphicon-triangle-right"></span></a>
+	  	<!-- JSP에서 사용할 수 있는 또다른 언어 EL -->
+	  </div>
+	</div>
 <%}else{ %>
-	<p>아이디 혹은 비밀번호를 확인해주세요.</p>
-	<a href="login_form.jsp?url=<%=url %>">로그인 홈</a>
+	<div class="panel panel-danger">
+	  <div class="panel-heading">
+	    <h3 class="panel-title"><strong>로그인 결과</strong></h3>
+	  </div>
+	  <div class="panel-body">
+	    <p>아이디 혹은 비밀번호를 확인해주세요.</p>
+	  </div>
+	  <div class="panel-footer">
+	  	<a class="btn btn-default" href="login_form.jsp?url=<%=url %>">로그인 홈 <span class="glyphicon glyphicon-triangle-right"></span></a>
+	  	<!-- JSP에서 사용할 수 있는 또다른 언어 EL -->
+	  </div>
+	</div>
 <%} %>
+</div>
 </body>
 </html>

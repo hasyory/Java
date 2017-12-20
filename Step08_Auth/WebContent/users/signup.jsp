@@ -7,8 +7,10 @@
 <head>
 <meta charset="UTF-8">
 <title>users/signup.jsp</title>
+<link rel="stylesheet" href="../css/bootstrap.css" />
 </head>
 <body>
+<div class="container">
 <%
 	//1. 폼 전송되는 내용을 읽어와서
 	request.setCharacterEncoding("utf-8");
@@ -25,7 +27,17 @@
 	UsersDao.getInstance().insert(dto);
 	//3. 응답
 %>
-<p><strong><%=id %> 회원님 가입이 완료되었습니다.</strong></p>
-<a href="${pageContext.request.contextPath}/">인덱스로 가기</a>
+	<div class="panel panel-default">
+	  <div class="panel-heading">
+	    <h3 class="panel-title"><strong>가입 결과</strong></h3>
+	  </div>
+	  <div class="panel-body">
+	    	<p><strong><%=id %> 회원님 가입이 완료되었습니다.</strong></p>
+	  </div>
+	  <div class="panel-footer">
+	  	<a class="btn btn-default" href="${pageContext.request.contextPath}/">홈<span class="glyphicon glyphicon-triangle-right"></span></a>
+	  </div>
+	</div>
+</div>
 </body>
 </html>

@@ -8,15 +8,29 @@
 <link rel="stylesheet" href="../css/bootstrap.css" />
 </head>
 <body>
-<h3>회원가입 페이지</h3>
-<form action="signup.jsp" method="post">
-	<label for="id">아이디</label>
-	<input type="text" name="id" id="id"/>	
-	<label for="pwd">비밀번호</label>
-	<input type="text" name="pwd" id="pwd"/>
-	<label for="email">이메일</label>
-	<input type="text" name="email" id="email"/>
-	<button type="submit">가입</button>
-</form>
+<div class="container">
+	<div class="panel panel-default">
+	  <div class="panel-heading">
+	    <h3 class="panel-title"><strong>회원가입 페이지</strong></h3>
+	  </div>
+	  <div class="panel-body">
+	    <form class="horizontal-form" action="signup.jsp" method="post">
+	    	<div class="form-group">
+				<label class="control-label" for="id">아이디</label>
+				<input class="form-control" type="text" name="id" id="id"/>	
+			</div>
+			<div class="form-group">
+				<label class="control-label" for="pwd">비밀번호</label>
+				<input class="form-control" type="text" name="pwd" id="pwd"/>
+			</div>
+			<div class="form-group">
+				<label class="control-label" for="email">이메일</label>
+				<input class="form-control" type="text" name="email" id="email"/>
+			</div>
+			<button class="btn btn-default" type="submit">가입</button>
+		</form>
+	  </div>  	
+	</div>
+</div>
 </body>
 </html>
