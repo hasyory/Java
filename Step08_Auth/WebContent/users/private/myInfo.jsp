@@ -22,10 +22,28 @@
 		    <h3 class="panel-title"><strong>내 정보</strong></h3>
 		  </div>
 		  <div class="panel-body">
-	    	<p>ID: <strong><%=id %></strong></p>
-			<p>PASSWORD: <strong><%=dto.getPwd() %></strong></p>
-			<p>EMAIL: <strong><%=dto.getEmail() %></strong></p>
-			<p>REGISTRATION DATE: <strong><%=dto.getDate() %></strong></p>
+		  	<table class="table">
+		  		<col-group>
+		  			<col class="col-xs-3" />
+		  			<col class="col-xs-9" />
+		  		</col-group>
+		  		<tr>
+		  			<th>ID</th>
+		  			<td><%=id %></td>
+		  		</tr>
+		  		<tr>
+		  			<th>Password</th>
+		  			<td><%=dto.getPwd() %></td>
+		  		</tr>
+		  		<tr>
+		  			<th>E-Mail</th>
+		  			<td><%=dto.getEmail() %></td>
+		  		</tr>
+		  		<tr>
+		  			<th>Registration date</th>
+		  			<td><%=dto.getDate() %></td>
+		  		</tr>
+		  	</table>
 		  </div>
 		  <div class="panel-footer">
 		  	<a class="btn btn-default" href="${pageContext.request.contextPath}/">홈 <span class="glyphicon glyphicon-triangle-right"></span></a>

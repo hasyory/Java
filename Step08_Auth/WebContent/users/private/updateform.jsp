@@ -21,7 +21,7 @@
 %>
 <div class="container">
 	<h3>내 정보</h3>
-	<form action="update.jsp" class="horizontal-form" method="post">
+	<form action="update.jsp" class="horizontal-form" method="post" id="updateForm">
 		<label class="control-label" for="id">아이디</label>
 		<input class="form-control" type="text" value="<%=id %>" disabled="disabled"/>
 		<input type="hidden" name="id" id="id" value="<%=id %>"/>	

@@ -29,8 +29,11 @@
 		</div>
 	  </div>
 	  <div class="panel-body">
-		<h3>비로그인 -> 회원가입 / 로그인</h3>
-		<h3>로그인 -> 회원정보 보기 / 수정 / 탈퇴</h3>
+	 	 <ul>
+			<li><h3>비로그인 -> 회원가입 / 로그인</h3></li>
+			<li><h3>로그인 -> 회원정보 보기 / 수정 / 탈퇴</h3></li>
+			<li><a href="member/play1.jsp" class="btn btn-default btn-sm">놀러가자</a></li>
+		</ul>
 	  </div>
 	</div>
 </div>

@@ -14,6 +14,8 @@
 	alert("<%=id%>님 로그아웃 되었습니다.");
 <%	
 	session.removeAttribute("id");
+	//session.invalidate();
+	//세션에 저장된 모든 내용 삭제
 %>
 	location.href="${pageContext.request.contextPath}/";
 </script>

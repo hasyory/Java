@@ -17,7 +17,7 @@ import javax.servlet.http.HttpSession;
  * 	javax.servlet.Filter 인터페이스를 구현해서 만든다.
  * 
  */
-@WebFilter("/users/private/*")
+@WebFilter({"/users/private/*","/member/*"})
 public class LoginFilter implements Filter{
 
 	@Override
